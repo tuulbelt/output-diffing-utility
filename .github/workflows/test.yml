@@ -44,13 +44,14 @@ jobs:
 
       - name: Verify zero runtime dependencies
         run: |
-          # Extract [dependencies] section and count entries (excluding dev-dependencies)
-          COUNT=$(awk '/^\[dependencies\]/,/^\[/ {if (!/^\[/ && !/^#/ && NF > 0) print}' Cargo.toml | grep -c '^[a-z]' || echo "0")
-          if [ "$COUNT" != "0" ]; then
-            echo "ERROR: Found $COUNT runtime dependencies. Tuulbelt tools must have zero runtime dependencies."
+          # Check if [dependencies] section has any non-comment, non-empty lines
+          COUNT=$(awk '/^\[dependencies\]/,/^\[/ {if (!/^\[/ && !/^#/ && NF > 0) print}' Cargo.toml | wc -l)
+          if [ "$COUNT" -gt 0 ]; then
+            echo "ERROR: Runtime dependencies found!"
+            awk '/^\[dependencies\]/,/^\[/ {if (!/^\[/ && !/^#/ && NF > 0) print}' Cargo.toml
             exit 1
           fi
-          echo "✓ Verified: Zero runtime dependencies"
+          echo "✓ Zero runtime dependencies confirmed"
 
   # Cross-platform testing (optional - enable for releases)
   # Uncomment for comprehensive testing across platforms
