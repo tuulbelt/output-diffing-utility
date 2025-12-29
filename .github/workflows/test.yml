@@ -3,11 +3,8 @@ name: Test
 on:
   push:
     branches: [main]
-    # Only run when this tool's files change (in monorepo context)
-    paths: ['output-diffing-utility/**']
   pull_request:
     branches: [main]
-    paths: ['output-diffing-utility/**']
 
 # Cancel in-progress runs when new commits are pushed
 concurrency:
@@ -44,6 +41,16 @@ jobs:
 
       - name: Build release
         run: cargo build --release
+
+      - name: Verify zero runtime dependencies
+        run: |
+          # Extract [dependencies] section and count entries (excluding dev-dependencies)
+          COUNT=$(awk '/^\[dependencies\]/,/^\[/ {if (!/^\[/ && !/^#/ && NF > 0) print}' Cargo.toml | grep -c '^[a-z]' || echo "0")
+          if [ "$COUNT" != "0" ]; then
+            echo "ERROR: Found $COUNT runtime dependencies. Tuulbelt tools must have zero runtime dependencies."
+            exit 1
+          fi
+          echo "✓ Verified: Zero runtime dependencies"
 
   # Cross-platform testing (optional - enable for releases)
   # Uncomment for comprehensive testing across platforms
