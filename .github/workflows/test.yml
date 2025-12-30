@@ -53,6 +53,18 @@ jobs:
           fi
           echo "✓ Zero runtime dependencies confirmed"
 
+      - name: Setup Node.js (for dogfood)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dogfood dependencies
+        run: npm ci
+
+      - name: Dogfood (flakiness detection)
+        run: npm run dogfood
+
   # Cross-platform testing (optional - enable for releases)
   # Uncomment for comprehensive testing across platforms
   # cross-platform:

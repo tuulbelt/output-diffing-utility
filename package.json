@@ -1,0 +1,13 @@
+{
+  "name": "@tuulbelt/output-diffing-utility",
+  "version": "0.1.0",
+  "description": "Semantic diff tool for JSON, text, and binary files in Rust",
+  "private": true,
+  "scripts": {
+    "dogfood": "npm run dogfood:flaky",
+    "dogfood:flaky": "flaky --test 'cargo test' --runs 20"
+  },
+  "devDependencies": {
+    "@tuulbelt/test-flakiness-detector": "git+https://github.com/tuulbelt/test-flakiness-detector.git"
+  }
+}
