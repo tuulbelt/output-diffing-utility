@@ -288,8 +288,4 @@ See `examples/` directory for real-world usage patterns.
 
 ## License
 
-MIT
-
-## Part of Tuulbelt
-
-This is tool #5 of 33 in the [Tuulbelt](https://github.com/tuulbelt/tuulbelt) collection of focused, zero-dependency utilities.
+MIT — see [LICENSE](LICENSE)
