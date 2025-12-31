@@ -1,5 +1,0 @@
-{"version": 2, "width": 80, "height": 24, "timestamp": 1767142523, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}, "title": "Output Diffing Utility / odiff - Tuulbelt"}
-[0.004204, "o", "# Output Diffing Utility Demo\r\n"]
-[1.006136, "o", "\r\n# 1. Text diff with color (unified format)\r\n"]
-[1.507483, "o", "$ odiff --color always /tmp/old.txt /tmp/new.txt\r\n"]
-[2.009999, "o", "--- /tmp/old.txt\r\n+++ /tmp/new.txt\r\n  Hello World\r\n\u001b[31m- This is line 2\u001b[0m\r\n\u001b[32m+ This is modified line 2\u001b[0m\r\n  Line 3 remains\r\n\u001b[31m- Line 4 is here\u001b[0m\r\n\u001b[32m+ Line 5 is different\u001b[0m\r\n"]
