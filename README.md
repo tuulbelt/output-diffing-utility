@@ -1,5 +1,7 @@
 # Output Diffing Utility
 
+**Part of [Tuulbelt](https://github.com/tuulbelt/tuulbelt)** — A collection of focused, zero-dependency tools
+
 Semantic diff tool for JSON, text, and binary files with zero dependencies.
 
 ## Problem
