@@ -273,7 +273,7 @@ See `examples/` directory for real-world usage patterns.
 
 ![Demo](docs/demo.gif)
 
-**[▶ View interactive recording on asciinema.org](#)**
+**[▶ View interactive recording on asciinema.org](https://asciinema.org/a/AiH1F1Q1yWAHIP2NJWjyFkcbp)**
 
 > Try it online: [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/tuulbelt/output-diffing-utility)
 
