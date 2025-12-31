@@ -64,7 +64,6 @@ jobs:
       - name: Setup Rust
         if: steps.check-demo.outputs.needs_demo == 'true'
         uses: dtolnay/rust-toolchain@stable
-        with:
 
       - name: Build release binary
         if: steps.check-demo.outputs.needs_demo == 'true'
