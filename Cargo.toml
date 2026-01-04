@@ -5,7 +5,9 @@ edition = "2021"
 description = "Semantic diff tool for JSON, text, and binary files with zero dependencies"
 license = "MIT"
 repository = "https://github.com/tuulbelt/output-diffing-utility"
+homepage = "https://github.com/tuulbelt/output-diffing-utility#readme"
 readme = "README.md"
+# Report issues at: https://github.com/tuulbelt/tuulbelt/issues
 keywords = ["tuulbelt", "cli", "diff", "comparison"]
 categories = ["command-line-utilities"]
 

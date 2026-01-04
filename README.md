@@ -1,4 +1,13 @@
-# Output Diffing Utility
+> **Part of [Tuulbelt](https://github.com/tuulbelt/tuulbelt)** — A collection of zero-dependency tools.
+
+# Output Diffing Utility / `odiff`
+
+[![Tests](https://github.com/tuulbelt/output-diffing-utility/actions/workflows/test.yml/badge.svg)](https://github.com/tuulbelt/output-diffing-utility/actions/workflows/test.yml)
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Rust](https://img.shields.io/badge/rust-1.70%2B-orange)
+![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success)
+![Tests](https://img.shields.io/badge/tests-108%20passing-success)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Semantic diff tool for JSON, text, and binary files with zero dependencies.
 
